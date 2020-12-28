@@ -13,7 +13,7 @@ var spark02;
 var spark03;
 function preload() {
   matchResult = loadStrings(
-    "https://raw.githubusercontent.com/maneeshaindrachapa/big-data-cw-static-page/master/assets/text/MatchResults.txt"
+    "https://raw.githubusercontent.com/maneeshaindrachapa/big-data-cw-static-page/master/assets/text/matchResults.txt"
   );
   matchesPlayedInEachCity_table = loadTable(
     "https://raw.githubusercontent.com/maneeshaindrachapa/big-data-cw-static-page/master/assets/text/MatchesPlayedInEachCity.csv",
