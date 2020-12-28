@@ -33,13 +33,10 @@
     <div class="wrapper">
       <div class="sidebar" data-color="white" data-active-color="danger">
         <div class="logo">
-          <a
-            href="#"
-            class="simple-text logo-normal"
-          >
+          <a href="#" class="simple-text logo-normal">
             <div class="logo-image-big">
-            <img src="./assets/img/logo.png">
-          </div>
+              <img src="./assets/img/logo.png" />
+            </div>
           </a>
         </div>
         <div class="sidebar-wrapper">
@@ -87,8 +84,7 @@
             <div
               class="collapse navbar-collapse justify-content-end"
               id="navigation"
-            >
-            </div>
+            ></div>
           </div>
         </nav>
         <!-- End Navbar -->
@@ -172,6 +168,9 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
               <!-- Question 04 - Top 10 Teams Based on the Average Goals per Match when Played Away-->
               <div class="row">
                 <div class="col-md-12">
@@ -203,6 +202,36 @@
                   </div>
                 </div>
               </div>
+              <!-- Question 05 - The 5 teams who have lost the most number of matches-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="card-title">
+                        The 5 Teams who have Lost the Most Number of Matches
+                      </h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table
+                          class="table"
+                          id="hive03table"
+                          data-show-header="true"
+                          data-pagination="true"
+                        >
+                          <thead class="text-primary">
+                            <th>Team</th>
+                            <th>No of Matches Lost</th>
+                          </thead>
+                          <tbody>
+                            <tr></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- Question 06 - Percentage of countries that have hosted more than one type of tournament-->
               <div class="row">
                 <div class="col-md-12">
@@ -220,42 +249,24 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <!-- Question 03 Hive 01- The total number of goals scored and conceded by each team when played home-->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title">
-                        The Total Number of Goals Scored and Conceded by Each
-                        Team
-                      </h5>
-                      <p class="card-category">when Played Home</p>
-                    </div>
-                    <div class="card-body">
-                      <canvas id="hive01chart" style="height: 2000px"></canvas>
-                    </div>
-                    <div class="card-footer">
-                      <div class="legend">
-                        <i class="fa fa-circle text-primary"></i> Scored
-                        <i class="fa fa-circle text-warning"></i> Conceded
-                      </div>
-                    </div>
-                  </div>
+          </div>
+          <!-- Question 03 Hive 01- The total number of goals scored and conceded by each team when played home-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">
+                    The Total Number of Goals Scored and Conceded by Each Team
+                  </h5>
+                  <p class="card-category">when Played Home</p>
                 </div>
-              </div>
-              <!-- Question 05 - The 5 teams who have lost the most number of matches-->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="card-title">
-                        The 5 Teams who have Lost the Most Number of Matches
-                      </h5>
-                    </div>
-                    <div class="card-body">
-                      <canvas id="hive03chart" style="height: 410px"></canvas>
-                    </div>
+                <div class="card-body">
+                  <canvas id="hive01chart" style="height: 800px"></canvas>
+                </div>
+                <div class="card-footer">
+                  <div class="legend">
+                    <i class="fa fa-circle text-primary"></i> Scored
+                    <i class="fa fa-circle text-warning"></i> Conceded
                   </div>
                 </div>
               </div>
@@ -318,12 +329,7 @@
         >
           <div class="container-fluid">
             <div class="row">
-              <div class="credits ml-auto">
-                <span class="copyright">
-                  © 2020, made with <i class="fa fa-heart heart"></i> by
-                  Maneesha Indrachapa
-                </span>
-              </div>
+              <div class="credits ml-auto"></div>
             </div>
           </div>
         </footer>

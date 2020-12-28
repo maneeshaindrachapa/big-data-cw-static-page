@@ -87,7 +87,7 @@ function _matchesPlayedInEachCity() {
 
   $("#totalNumberOfMatchesPlayedInEachCity").each(function () {
     var currentPage = 0;
-    var numPerPage = 23;
+    var numPerPage = 25;
     var $table = $("#totalNumberOfMatchesPlayedInEachCity");
     $table.bind("repaginate", function () {
       $table
@@ -137,7 +137,7 @@ function _hive01() {
   }
   var ctx = document.getElementById("hive01chart").getContext("2d");
   var hive01chart = new Chart(ctx, {
-    type: "horizontalBar",
+    type: "bar",
     options: {
       maintainAspectRatio: false,
       legend: {
@@ -192,44 +192,17 @@ function _hive02() {
 
 //Question 05 - The 5 teams who have lost the most number of matches
 function _hive03() {
-  let teams = [];
-  let matchesLost = [];
-
-  for (let i = 0; i < hive03.getRowCount(); i++) {
-    teams.push(hive03.getRow(i).getString(1));
-    matchesLost.push(hive03.getRow(i).getString(0));
+  let table = $("#hive03table tr:last");
+  let textTohtml = "";
+  for (let r = 0; r < hive03.getRowCount(); r++) {
+    textTohtml +=
+      "<tr><td>" +
+      hive03.getRow(r).getString(1) +
+      "</td><td>" +
+      hive03.getRow(r).getString(0) +
+      "</td></tr>";
   }
-  var ctx = document.getElementById("hive03chart").getContext("2d");
-  var hive01chart = new Chart(ctx, {
-    type: "bar",
-    options: {
-      maintainAspectRatio: false,
-      legend: {
-        display: false,
-      },
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
-    },
-    data: {
-      labels: [...teams],
-      datasets: [
-        {
-          label: "Matches Lost",
-          data: [...matchesLost],
-          backgroundColor: "rgba(81, 203, 206,0.8)",
-          borderColor: "rgba(81, 203, 206,0.8)",
-          borderWidth: 1,
-        },
-      ],
-    },
-  });
+  table.after(textTohtml);
 }
 
 //Question 06 - Percentage of countries that have hosted more than one type of tournament
