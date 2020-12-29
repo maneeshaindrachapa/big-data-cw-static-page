@@ -67,8 +67,6 @@ function _matchResult() {
   document.getElementById("matchResult_drawn").innerHTML = matchResult_set[0];
   document.getElementById("matchResult_with_result").innerHTML =
     matchResult_set[1];
-  document.getElementById("matchResult_total").innerHTML =
-    matchResult_set[1] + matchResult_set[0];
 }
 
 //Question 02 - Total number of matches played in each city
